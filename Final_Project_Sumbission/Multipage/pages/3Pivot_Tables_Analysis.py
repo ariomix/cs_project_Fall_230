@@ -115,7 +115,7 @@ def main():
     else: # if Stacked Bar Chart, then
         pivot_meter = df.pivot_table(columns = "METER_TYPE", index = "STREET", aggfunc="size", # I used here Chatgpt fill_value=0) # pivot table displays the number of parking spots per street by meter type
         pivot_meter = pivot_meter[pivot_meter["MULTI-SPACE STALL"]>0] # we are only considering streets with at least a multi-space for our analysis
-        pivot_meter["COMBO"] = pivot_meter["MULTI-SPACE STALL"] + pivot_meter["SINGLE-SPACE"] # creating a new column combining the parking spots to a total
+        pivot_meter = pivot_meter.assign(COMBO = lambda x: x['MULTI-SPACE STALL'] + x['SINGLE-SPACE']) # creating a new column combining the parking spots to a total
         pivot_meter = pivot_meter.sort_values(by = "COMBO", ascending = False) # we are sorting the total in descending order
         pivot_meter = pivot_meter[:5] # retrieving the 5 major streets (by size) with multipace-stalls on them
         pivot_meter = filter_for_empty_and_useless(pivot_meter,"COMBO")
