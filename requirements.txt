@@ -1,5 +1,5 @@
-streamlit library
-matplotlib library
-pandas library
-os library
-csv library
+streamlit
+matplotlib
+pandas
+os
+csv
