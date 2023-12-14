@@ -10,7 +10,7 @@ st.title(":blue[Street and Parking Spots Info]") # title of new page
 st.text("Use the searchbar to filter for a particular street that you have in mind!\n"\
         "Based on your query, we will give you all the parking spots available and \n"\
         "any relevant info for each one!")
-filename = "Parking_Meters.csv" # our file
+filename = "Final_Project_Sumbission/Multipage/pages/Parking_Meters.csv" # our file
 indexcol = "OBJECTID" # our preferred index column if we choose to use it (for this page we will)
 index_name = "PARKING_SPOT_#" # our new name that we will give to the index
 not_needed_columns = ['X','Y','LOCK_','G_SUBZONE','G_ZONE','G_DISTRICT',
