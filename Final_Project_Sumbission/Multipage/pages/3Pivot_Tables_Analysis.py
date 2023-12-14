@@ -16,7 +16,7 @@ st.text("Use the slider to switch between difeerent graphs created from pivot ta
         "streets that have at least one MULTI-STALL parking meter and highlights the \n"\
         "breakdown between SINGLE and MULTI-STALL")
 
-filename = "../Parking_Meters.csv"
+filename = "Parking_Meters.csv"
 indexcol = "OBJECTID"
 index_name = "PARKING_ID"
 not_needed_columns = ['X','Y','LOCK_','G_SUBZONE','G_ZONE','G_DISTRICT',
